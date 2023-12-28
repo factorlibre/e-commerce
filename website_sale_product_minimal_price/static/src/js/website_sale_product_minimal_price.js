@@ -18,7 +18,17 @@ odoo.define("website_sale_product_minimal_price.shop_min_price", function (requi
             const $products = $(".o_wsale_product_grid_wrapper");
             const product_dic = {};
             $products.each(function () {
-                product_dic[this.querySelector("a img").src.split("/")[6]] = this;
+                let product_template_id = this.querySelector("a img").src.split("/")[6];
+                if (this.querySelector("[data-product-id]")) {
+                    product_template_id =
+                        this.querySelector("[data-product-id]").getAttribute(
+                            "data-product-id"
+                        );
+                }
+                if (!product_template_id) {
+                    return;
+                }
+                product_dic[product_template_id] = this;
             });
             const product_ids = Object.keys(product_dic).map(Number);
             return this._rpc({
