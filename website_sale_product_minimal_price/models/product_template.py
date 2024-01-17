@@ -75,16 +75,18 @@ class ProductTemplate(models.Model):
         else:
             products = variants_without_extra_price[:1]
         products |= variants_extra_price
-        for product in products:
+        for product in list(self) + list(products):
             for qty in [1, 99999999]:
                 product_price = product.with_context(
                     quantity=qty, pricelist=pricelist.id
                 )._get_contextual_price()
-                if product_price != min_price and min_price != 99999999:
+                if product_price != min_price and (
+                    min_price != 99999999 or product._name == "product.template"
+                ):
                     # Mark if there are different prices iterating over
                     # variants and comparing qty 1 and maximum qty
                     has_distinct_price = True
-                if product_price < min_price:
+                if product_price < min_price and product._name != "product.template":
                     min_price = product_price
                     add_qty = qty
                     product_id = product.id
