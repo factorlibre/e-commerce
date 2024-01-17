@@ -2,7 +2,13 @@
 # Copyright 2020 Tecnativa - Pedro M. Baeza
 # Copyright 2021 Tecnativa - Carlos Roca
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-from odoo import models
+from markupsafe import Markup
+
+from odoo import _, models
+
+from odoo.addons.sale.models.product_template import (
+    ProductTemplate as ProductTemplateSale,
+)
 
 
 class ProductTemplate(models.Model):
@@ -111,3 +117,39 @@ class ProductTemplate(models.Model):
                     value = line.product_template_value_ids[:1]
                 res += value
         return res
+
+    _original_get_combination_info = ProductTemplateSale._get_combination_info
+
+    def _new_get_combination_info(self, only_template=False, pricelist=False, **kwargs):
+        combination_info = self._original_get_combination_info(
+            only_template=only_template, pricelist=pricelist, **kwargs
+        )
+        if only_template and self.env.context.get("website_id"):
+            current_website = self.env["website"].get_current_website()
+            if not pricelist:
+                pricelist = current_website.get_current_pricelist()
+            product_id, add_qty, has_distinct_price = self._get_cheapest_info(
+                pricelist or current_website.get_current_pricelist()
+            )
+            combination_info["has_distinct_price"] = has_distinct_price
+            if has_distinct_price:
+                combination = self._get_combination_info(
+                    product_id=product_id, add_qty=add_qty, pricelist=pricelist
+                )
+                combination_info["minimal_price"] = combination.get("price")
+        return combination_info
+
+    # Monkey patch original method from module sale, as website_sale makes
+    # modifications to price
+    ProductTemplateSale._get_combination_info = _new_get_combination_info
+
+    def _search_render_results_prices(self, mapping, combination_info):
+        price, list_price = super()._search_render_results_prices(
+            mapping, combination_info
+        )
+        if (
+            combination_info.get("has_distinct_price")
+            and not combination_info["prevent_zero_price_sale"]
+        ):
+            price = Markup("<span>{}</span> ".format(_("From"))) + price
+        return price, list_price
