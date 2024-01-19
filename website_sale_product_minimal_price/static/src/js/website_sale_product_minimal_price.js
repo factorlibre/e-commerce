@@ -36,18 +36,20 @@ odoo.define("website_sale_product_minimal_price.shop_min_price", function (requi
                 params: {product_template_ids: product_ids},
             }).then((products_min_price) => {
                 for (const product of products_min_price) {
-                    if (!product.distinct_prices) {
+                    if (!product.distinct_prices && !product.distinct_prices_tmpl) {
                         continue;
                     }
-                    $(product_dic[product.id])
-                        .find(".product_price")
-                        .prepend(
-                            $(
-                                core.qweb.render(
-                                    "website_sale_product_minimal_price.from_view"
-                                )
-                            ).get(0)
-                        );
+                    if (product.distinct_prices) {
+                        $(product_dic[product.id])
+                            .find(".product_price")
+                            .prepend(
+                                $(
+                                    core.qweb.render(
+                                        "website_sale_product_minimal_price.from_view"
+                                    )
+                                ).get(0)
+                            );
+                    }
                     const $price = $(product_dic[product.id]).find(
                         ".product_price span .oe_currency_value"
                     );

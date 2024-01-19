@@ -14,6 +14,7 @@ odoo.define("website_sale_product_minimal_price.tour", function (require) {
         {
             trigger: "a[href='/shop']",
             extra_trigger: ".js_add_cart_variants:has(span:contains('Test v2'))",
+            content: "Test v2 product is shown",
         },
         {
             trigger: "a:contains('My product test with various prices')",
@@ -21,6 +22,7 @@ odoo.define("website_sale_product_minimal_price.tour", function (require) {
         {
             trigger: "a[href='/shop']",
             extra_trigger: ".product_price:has(span:contains('125.00'))",
+            content: "Price is 125.00",
         },
     ];
 
