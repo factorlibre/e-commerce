@@ -91,15 +91,14 @@ class ProductTemplate(models.Model):
         res = super()._get_first_possible_combination(
             parent_combination=parent_combination, necessary_values=necessary_values
         )
-        context = self.env.context
-        if (
-            context.get("website_id")
-            and context.get("pricelist")
-            and self.product_variant_count > 1
-        ):
+        if self.env.context.get("website_id") and self.product_variant_count > 1:
             # It only makes sense to change the default one when there are
             # more than one variants and we know the pricelist
-            pricelist = self.env["product.pricelist"].browse(context["pricelist"])
+            pricelist = (
+                self.env["website"]
+                .browse(self.env.context.get("website_id"))
+                .get_current_pricelist()
+            )
             product_id = self._get_cheapest_info(pricelist)[0]
             product = self.env["product.product"].browse(product_id)
             # Rebuild the combination in the expected order
