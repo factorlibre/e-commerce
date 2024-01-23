@@ -163,7 +163,9 @@ class ProductTemplate(models.Model):
                 pricelist or current_website.get_current_pricelist()
             )[self.id]
             combination_info["has_distinct_price"] = info["has_distinct_price"]
-            if info["has_distinct_price"]:
+            if info.get("has_distinct_price") or info.get(
+                "has_distinct_price_from_tmpl"
+            ):
                 combination = self._get_combination_info(
                     product_id=info["product_id"],
                     add_qty=info["add_qty"],
@@ -180,9 +182,12 @@ class ProductTemplate(models.Model):
         price, list_price = super()._search_render_results_prices(
             mapping, combination_info
         )
-        if (
-            combination_info.get("has_distinct_price")
-            and not combination_info["prevent_zero_price_sale"]
-        ):
-            price = Markup("<span>{}</span> ".format(_("From"))) + price
+        if not combination_info["prevent_zero_price_sale"]:
+            if combination_info.get("minimal_price"):
+                price = self.env["ir.qweb.field.monetary"].value_to_html(
+                    combination_info["minimal_price"],
+                    {"display_currency": mapping["detail"]["display_currency"]},
+                )
+            if combination_info.get("has_distinct_price"):
+                price = Markup("<span>{}</span> ".format(_("From"))) + price
         return price, list_price
