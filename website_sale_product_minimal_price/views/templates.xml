@@ -29,4 +29,12 @@
             <attribute name="t-foreach">sorted_values</attribute>
         </xpath>
     </template>
+    <template id="products_item" inherit_id="website_sale.products_item">
+        <xpath
+            expr="//div[hasclass('o_wsale_product_sub')]/div[hasclass('product_price')]"
+            position="attributes"
+        >
+            <attribute name="class" separator=" " add="d-none" />
+        </xpath>
+    </template>
 </odoo>
