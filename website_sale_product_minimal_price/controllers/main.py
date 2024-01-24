@@ -26,10 +26,13 @@ class WebsiteSaleVariantController(VariantController):
             .browse(product_template_ids)
             .filtered("is_published")
         )
-        pricelist = request.env["website"].get_current_website().get_current_pricelist()
+        website = request.env["website"].get_current_website()
+        pricelist = website.get_current_pricelist()
         cheapest_info = templates._get_cheapest_info(pricelist)
         for template in templates:
             info = cheapest_info.get(template.id)
+            if info.get("tmpl_price_zero") and website.prevent_zero_price_sale:
+                continue
             vals = {
                 "id": template.id,
                 "distinct_prices": info.get("has_distinct_price"),

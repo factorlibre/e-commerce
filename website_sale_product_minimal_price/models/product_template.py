@@ -7,6 +7,7 @@ from functools import reduce
 from markupsafe import Markup
 
 from odoo import _, fields, models
+from odoo.tools import float_is_zero
 
 from odoo.addons.sale.models.product_template import (
     ProductTemplate as ProductTemplateSale,
@@ -118,6 +119,9 @@ class ProductTemplate(models.Model):
                 "add_qty": add_qty,
                 "has_distinct_price": has_distinct_price,
                 "has_distinct_price_from_tmpl": has_distinct_price_from_tmpl,
+                "tmpl_price_zero": float_is_zero(
+                    tmpl_price, precision_rounding=pricelist.currency_id.rounding
+                ),
             }
         return info
 
