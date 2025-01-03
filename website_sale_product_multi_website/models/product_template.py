@@ -7,6 +7,8 @@ class ProductTemplate(models.Model):
 
     website_ids = fields.Many2many("website", string="Websites")
 
+    website_published = fields.Boolean(compute_sudo=True)
+
     def can_access_from_current_website(self, website_id=False):
         """We overwrite this method completely in order to
         use the website_ids logic instead of website_id"""
