@@ -26,5 +26,5 @@ class Website(models.Model):
         for rec in self:
             rec.website_show_price = (
                 not rec.website_hide_price
-                and request.env.user.partner_id.website_show_price
+                and (not request or request.env.user.partner_id.website_show_price)
             )
