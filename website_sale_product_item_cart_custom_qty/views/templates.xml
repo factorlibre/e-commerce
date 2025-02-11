@@ -21,9 +21,9 @@
                 <input
                     type="text"
                     class="js_quantity form-control quantity"
-                    data-min="1"
+                    t-att-data-min="min(1, add_qty) if force_add_qty else 1"
                     name="add_qty"
-                    t-att-value="add_qty or 1"
+                    t-att-value="str(add_qty) if add_qty or force_add_qty else 1"
                 />
                 <div class="input-group-append">
                     <a
