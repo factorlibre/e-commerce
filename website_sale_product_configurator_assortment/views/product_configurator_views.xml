@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template
+        id="configure_optional_products_inherit"
+        inherit_id="sale_product_configurator.configure_optional_products"
+    >
+        <xpath expr='//t[@t-set="parent_combination"]' position="after">
+            <t t-set="parent_combination_info" t-value="combination_info" />
+        </xpath>
+        <xpath expr="//tr[@class='o_select_options']" position="attributes">
+            <attribute
+                name="t-if"
+            >not combination_info.get('assortment_restriction') or (combination_info.get('allowed_optional_product_ids') and combination_info.get('assortment_restriction'))</attribute>
+        </xpath>
+    </template>
+    <template
+        id="optional_product_items_inherit"
+        inherit_id="sale_product_configurator.optional_product_items"
+    >
+        <xpath expr="//tr[hasclass('js_product')]" position="attributes">
+            <attribute
+                name="t-if"
+            >not parent_combination_info.get('assortment_restriction') or (parent_combination_info.get('assortment_restriction') and combination_info.get('product_template_id') in parent_combination_info.get('allowed_optional_product_ids'))</attribute>
+        </xpath>
+    </template>
+</odoo>
