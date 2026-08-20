@@ -1,0 +1,93 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_sale_product_attachment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: website_sale_product_attachment
+#: model_terms:ir.ui.view,arch_db:website_sale_product_attachment.product_attachments
+msgid ""
+"<i class=\"fa fa-download\"/>\n"
+"                                    Product downloads"
+msgstr ""
+"<i class=\"fa fa-download\"/>\n"
+"                                    Descargas do produto"
+
+#. module: website_sale_product_attachment
+#: model_terms:ir.ui.view,arch_db:website_sale_product_attachment.product_template_form_view
+msgid ""
+"<i class=\"fa fa-info-circle\"/>\n"
+"                        Only public attachments can be used or created here.\n"
+"                        Removing one attachment from this list does not delete\n"
+"                        or unpublish it from your database."
+msgstr ""
+"<i class=\"fa fa-info-circle\"/>\n"
+"                        Aqui só podem ser utilizados ou criados anexos públicos.\n"
+"                        Retirar um anexo desta lista não o elimina\n"
+"                        nem o despublica da sua base de dados."
+
+#. module: website_sale_product_attachment
+#: model:ir.model.fields,field_description:website_sale_product_attachment.field_ir_attachment__attached_in_product_tmpl_ids
+msgid "Attached in products"
+msgstr "Anexado nos produtos"
+
+#. module: website_sale_product_attachment
+#: model:ir.model,name:website_sale_product_attachment.model_ir_attachment
+msgid "Attachment"
+msgstr "Anexo"
+
+#. module: website_sale_product_attachment
+#: model:ir.model.fields,help:website_sale_product_attachment.field_ir_attachment__attached_in_product_tmpl_ids
+msgid ""
+"Attachment publicly downladable from eCommerce pages in these product "
+"templates."
+msgstr "Ficheiro descarregável publicamente a partir das páginas destes modelos de produto na loja do website."
+
+#. module: website_sale_product_attachment
+#: model_terms:ir.ui.view,arch_db:website_sale_product_attachment.product_template_form_view
+msgid "File Name"
+msgstr "Nome do ficheiro"
+
+#. module: website_sale_product_attachment
+#: model:ir.model.fields,help:website_sale_product_attachment.field_product_product__website_attachment_ids
+#: model:ir.model.fields,help:website_sale_product_attachment.field_product_template__website_attachment_ids
+msgid "Files publicly downloadable from the product eCommerce page."
+msgstr "Ficheiros descarregáveis publicamente a partir da página do produto na loja do website."
+
+#. module: website_sale_product_attachment
+#: model:ir.model.fields,field_description:website_sale_product_attachment.field_ir_attachment__website_name
+msgid "Name in e-commerce"
+msgstr "Nome no comércio eletrónico"
+
+#. module: website_sale_product_attachment
+#: model:ir.model,name:website_sale_product_attachment.model_product_template
+msgid "Product"
+msgstr "Produto"
+
+#. module: website_sale_product_attachment
+#: model:ir.model.fields,help:website_sale_product_attachment.field_ir_attachment__website_name
+msgid ""
+"The name of the download that will be displayed on the e-commerce product "
+"page. If not filled, the filename will be shown by default."
+msgstr "O nome da descarga que será apresentado na página de produto do comércio eletrónico. Se não for preenchido, será apresentado o nome do ficheiro por predefinição."
+
+#. module: website_sale_product_attachment
+#: model_terms:ir.ui.view,arch_db:website_sale_product_attachment.product_template_form_view
+msgid "Website Attachments"
+msgstr "Anexos do website"
+
+#. module: website_sale_product_attachment
+#: model:ir.model.fields,field_description:website_sale_product_attachment.field_product_product__website_attachment_ids
+#: model:ir.model.fields,field_description:website_sale_product_attachment.field_product_template__website_attachment_ids
+msgid "Website attachments"
+msgstr "Anexos do website"
