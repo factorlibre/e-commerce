@@ -21,17 +21,17 @@ msgstr ""
 #. module: product_template_multi_link
 #: model_terms:ir.ui.view,arch_db:product_template_multi_link.product_template_linker_form_view
 msgid "Cancel"
-msgstr ""
+msgstr "Storno"
 
 #. module: product_template_multi_link
 #: model_terms:ir.ui.view,arch_db:product_template_multi_link.product_template_linker_form_view
 msgid "Create links"
-msgstr ""
+msgstr "Verknüpfungen erstellen"
 
 #. module: product_template_multi_link
 #: model_terms:ir.ui.view,arch_db:product_template_multi_link.product_template_linker_form_view
 msgid "Create links?"
-msgstr ""
+msgstr "Verknüpfungen erstellen?"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link__create_uid
@@ -53,7 +53,7 @@ msgstr "Erstellt am:"
 #: model:product.template.link.type,inverse_name:product_template_multi_link.product_template_link_type_cross_selling
 #: model:product.template.link.type,name:product_template_multi_link.product_template_link_type_cross_selling
 msgid "Cross Selling"
-msgstr ""
+msgstr "Cross-Selling"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template__display_name
@@ -66,7 +66,7 @@ msgstr "Anzeigename"
 #. module: product_template_multi_link
 #: model_terms:ir.ui.view,arch_db:product_template_multi_link.product_template_link__search
 msgid "Group By"
-msgstr ""
+msgstr "Gruppieren nach"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template__id
@@ -80,17 +80,17 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link__link_type_inverse_name
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link_type__inverse_name
 msgid "Inverse Name"
-msgstr ""
+msgstr "Inverser Name"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link__is_link_active
 msgid "Is Link Active"
-msgstr ""
+msgstr "Verknüpfung ist aktiv"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link_type__is_symmetric
 msgid "Is Symmetric"
-msgstr ""
+msgstr "Ist symmetrisch"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template____last_update
@@ -117,64 +117,64 @@ msgstr "Zuletzt aktualisiert am"
 #. module: product_template_multi_link
 #: model:ir.model.constraint,message:product_template_multi_link.constraint_product_template_link_type_code_uniq
 msgid "Link code already exists !"
-msgstr ""
+msgstr "Der Verknüpfungscode existiert bereits!"
 
 #. module: product_template_multi_link
 #: model:ir.model.constraint,message:product_template_multi_link.constraint_product_template_link_type_inverse_code_uniq
 msgid "Link inverse code already exists !"
-msgstr ""
+msgstr "Der inverse Verknüpfungscode existiert bereits!"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields.selection,name:product_template_multi_link.selection__product_template_linker__operation_type__link
 msgid "Link these products"
-msgstr ""
+msgstr "Diese Produkte verknüpfen"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link__type_id
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_linker__type_id
 msgid "Link type"
-msgstr ""
+msgstr "Verknüpfungstyp"
 
 #. module: product_template_multi_link
 #: model:ir.model.constraint,message:product_template_multi_link.constraint_product_template_link_type_inverse_name_uniq
 msgid "Link type inverse name already exists !"
-msgstr ""
+msgstr "Der inverse Name des Verknüpfungstyps existiert bereits!"
 
 #. module: product_template_multi_link
 #: model:ir.model.constraint,message:product_template_multi_link.constraint_product_template_link_type_name_uniq
 msgid "Link type name already exists !"
-msgstr ""
+msgstr "Der Name des Verknüpfungstyps existiert bereits!"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link__right_product_tmpl_id
 msgid "Linked Product"
-msgstr ""
+msgstr "Verknüpftes Produkt"
 
 #. module: product_template_multi_link
 #: model:product.template.link.type,inverse_name:product_template_multi_link.product_template_link_type_demo_range
 msgid "Lower Range"
-msgstr ""
+msgstr "Unterer Bereich"
 
 #. module: product_template_multi_link
 #: model:ir.actions.act_window,name:product_template_multi_link.product_template_linker_action
 msgid "Manage Product Links"
-msgstr ""
+msgstr "Produktverknüpfungen verwalten"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link_type__manual_inverse_code
 msgid "Manual Inverse Code"
-msgstr ""
+msgstr "Inverser Code (manuell)"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link_type__manual_inverse_name
 msgid "Manual Inverse Name"
-msgstr ""
+msgstr "Inverser Name (manuell)"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link__link_type_name
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link_type__name
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #. module: product_template_multi_link
 #: code:addons/product_template_multi_link/models/product_template_link.py:0
@@ -183,11 +183,13 @@ msgid ""
 "Only one link with the same type is allowed between 2 products. \n"
 " %s"
 msgstr ""
+"Zwischen 2 Produkten ist nur eine Verknüpfung desselben Typs zulässig. \n"
+" %s"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_linker__operation_type
 msgid "Operation"
-msgstr ""
+msgstr "Vorgang"
 
 #. module: product_template_multi_link
 #: model_terms:ir.ui.view,arch_db:product_template_multi_link.product_template_link__search
@@ -242,7 +244,7 @@ msgstr "Produktverknüpfungen"
 #. module: product_template_multi_link
 #: model:ir.model,name:product_template_multi_link.model_product_template_linker
 msgid "Product template linker wizard"
-msgstr ""
+msgstr "Assistent zum Verknüpfen von Produktvorlagen"
 
 #. module: product_template_multi_link
 #: model_terms:ir.ui.view,arch_db:product_template_multi_link.product_template_link__search
@@ -253,12 +255,12 @@ msgstr "Produktvorlage"
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_linker__product_ids
 msgid "Products"
-msgstr ""
+msgstr "Produkte"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields.selection,name:product_template_multi_link.selection__product_template_linker__operation_type__unlink
 msgid "Remove existing links"
-msgstr ""
+msgstr "Bestehende Verknüpfungen entfernen"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,help:product_template_multi_link.field_product_template_linker__operation_type
@@ -267,16 +269,18 @@ msgid ""
 "products;\n"
 "Link these products: will link all selected products together."
 msgstr ""
+"Bestehende Verknüpfungen entfernen: entfernt jede bestehende Verknüpfung an jedem ausgewählten Produkt;\n"
+"Diese Produkte verknüpfen: verknüpft alle ausgewählten Produkte miteinander."
 
 #. module: product_template_multi_link
 #: model_terms:ir.ui.view,arch_db:product_template_multi_link.product_template_linker_form_view
 msgid "Remove links"
-msgstr ""
+msgstr "Verknüpfungen entfernen"
 
 #. module: product_template_multi_link
 #: model_terms:ir.ui.view,arch_db:product_template_multi_link.product_template_linker_form_view
 msgid "Remove links?"
-msgstr ""
+msgstr "Verknüpfungen entfernen?"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link__left_product_tmpl_id
@@ -286,17 +290,17 @@ msgstr "Produktherkunft"
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link_type__code
 msgid "Technical code"
-msgstr ""
+msgstr "Technischer Code"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,field_description:product_template_multi_link.field_product_template_link_type__inverse_code
 msgid "Technical code (inverse)"
-msgstr ""
+msgstr "Technischer Code (invers)"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,help:product_template_multi_link.field_product_template_link_type__is_symmetric
 msgid "The relation meaning is the same from each side of the relation"
-msgstr ""
+msgstr "Die Bedeutung der Beziehung ist von beiden Seiten der Beziehung aus dieselbe"
 
 #. module: product_template_multi_link
 #: model:ir.model.fields,help:product_template_multi_link.field_product_template_link_type__code
@@ -304,26 +308,26 @@ msgstr ""
 msgid ""
 "This code allows to provide a technical code to externalsystems identifying "
 "this link type"
-msgstr ""
+msgstr "Dieser Code ermöglicht es, externen Systemen einen technischen Code zur Identifizierung dieses Verknüpfungstyps bereitzustellen"
 
 #. module: product_template_multi_link
 #: model_terms:ir.ui.view,arch_db:product_template_multi_link.product_template_link__search
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #. module: product_template_multi_link
 #: model:product.template.link.type,inverse_name:product_template_multi_link.product_template_link_type_up_selling
 #: model:product.template.link.type,name:product_template_multi_link.product_template_link_type_up_selling
 msgid "Up Selling"
-msgstr ""
+msgstr "Up-Selling"
 
 #. module: product_template_multi_link
 #: model:product.template.link.type,name:product_template_multi_link.product_template_link_type_demo_range
 msgid "Upper Range"
-msgstr ""
+msgstr "Oberer Bereich"
 
 #. module: product_template_multi_link
 #: code:addons/product_template_multi_link/models/product_template_link.py:0
 #, python-format
 msgid "You can only create a link between 2 different products"
-msgstr ""
+msgstr "Sie können eine Verknüpfung nur zwischen 2 unterschiedlichen Produkten erstellen"
