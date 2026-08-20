@@ -1,0 +1,130 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_sale_product_assortment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: pt\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields,help:website_sale_product_assortment.field_ir_filters__website_availability
+msgid ""
+"\n"
+"        Each point is used to:\n"
+"\n"
+"        \t- Don't apply restriction: Show all products available for sale on website.\n"
+"\n"
+"        \t- Avoid to show non available products: Show only products available for sale\n"
+"        on website.\n"
+"\n"
+"        \t- Avoid selling not available products: Show all products, but avoid\n"
+"        purchase on website.\n"
+"\n"
+"        "
+msgstr ""
+"\n"
+"        Cada ponto é utilizado para:\n"
+"\n"
+"        \t- Não aplicar restrição: Mostrar todos os produtos disponíveis para venda no website.\n"
+"\n"
+"        \t- Evitar mostrar os produtos não disponíveis: Mostrar apenas os produtos disponíveis para venda\n"
+"        no website.\n"
+"\n"
+"        \t- Evitar a venda de produtos não disponíveis: Mostrar todos os produtos, mas evitar\n"
+"        a venda no website.\n"
+"\n"
+"        "
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields,field_description:website_sale_product_assortment.field_ir_filters__all_product_ids
+msgid "All Product"
+msgstr "Todos os produtos"
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields,field_description:website_sale_product_assortment.field_ir_filters__apply_on_public_user
+msgid "Apply On Public User"
+msgstr "Aplicar no utilizador público"
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields,field_description:website_sale_product_assortment.field_ir_filters__assortment_information
+msgid "Assortment Information"
+msgstr "Informação de sortido"
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields,field_description:website_sale_product_assortment.field_ir_filters__website_availability
+msgid "Availability on Website"
+msgstr "Disponibilidade no website"
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields.selection,name:website_sale_product_assortment.selection__ir_filters__website_availability__no_purchase
+msgid "Avoid selling not available products"
+msgstr "Não permitir vender produtos não disponíveis"
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields.selection,name:website_sale_product_assortment.selection__ir_filters__website_availability__no_show
+msgid "Avoid to show non available products"
+msgstr "Não permitir mostrar produtos não disponíveis"
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields.selection,name:website_sale_product_assortment.selection__ir_filters__website_availability__no_restriction
+msgid "Don't apply restriction"
+msgstr "Não aplicar restrição"
+
+#. module: website_sale_product_assortment
+#: model:ir.model,name:website_sale_product_assortment.model_ir_filters
+msgid "Filters"
+msgstr "Filtros"
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields,help:website_sale_product_assortment.field_ir_filters__message_unavailable
+msgid ""
+"Message showed when some product is not available and the option\n"
+"        'Avoid selling not available products' is selected.\n"
+"        "
+msgstr ""
+"Mensagem apresentada quando algum produto não está disponível e a opção\n"
+"        'Evitar a venda de produtos não disponíveis' está selecionada.\n"
+"        "
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields,field_description:website_sale_product_assortment.field_ir_filters__message_unavailable
+msgid "Message when unavailable"
+msgstr "Mensagem quando não está disponível"
+
+#. module: website_sale_product_assortment
+#. odoo-python
+#: code:addons/website_sale_product_assortment/controllers/variant.py:0
+#, python-format
+msgid "Not available"
+msgstr "Não disponível"
+
+#. module: website_sale_product_assortment
+#: model:ir.model,name:website_sale_product_assortment.model_product_template
+msgid "Product"
+msgstr "Produto"
+
+#. module: website_sale_product_assortment
+#. odoo-javascript
+#: code:addons/website_sale_product_assortment/static/src/xml/website_sale_product_assortment.xml:0
+#: code:addons/website_sale_product_assortment/static/src/xml/website_sale_product_assortment.xml:0
+#, python-format
+msgid "Warning"
+msgstr "Aviso"
+
+#. module: website_sale_product_assortment
+#: model_terms:ir.ui.view,arch_db:website_sale_product_assortment.product_assortment_view_form
+msgid "Website Availability"
+msgstr "Disponibilidade no website"
+
+#. module: website_sale_product_assortment
+#: model:ir.model.fields,field_description:website_sale_product_assortment.field_ir_filters__website_ids
+msgid "Websites"
+msgstr "Páginas web"
